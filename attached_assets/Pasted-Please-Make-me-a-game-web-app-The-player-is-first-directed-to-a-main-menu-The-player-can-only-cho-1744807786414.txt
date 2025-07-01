@@ -1,0 +1,45 @@
+Please Make me a game web app.
+
+The player is first directed to a main menu. The player can only choose "Solo" mode (have grey option boxes with "VS Bot" and "VS Player" as options that have not been released yet)
+
+In Solo, here are the game rules:
+- There is an unlimited deck of cards
+- The deck of cards contains numeral cards (from 1 to 9) and basic arithmetic cards (addition, subtraction, division and multiplication).
+- Numeral cards are blue, arithmetic cards are red, and all cards have a white outline around them
+- The player's hand has a maximum of 7 cards
+- The player's hand must always have at least 2 numbers and 1 arithmetic card.
+- When cards are "played", they are removed from the player's hand (ie discarded).
+
+When "Solo" mode is selected, the player should be able to further refine their selection by selecting the difficulty:
+1. Basic arithmetic
+2. Decimals and fractions
+3. Negative numbers
+4. Functions
+5. Algebra
+
+At the start of the game, a deck of 7 cards is generated for the player, with 3 arithmetic cards and 4 number cards. The player must choose a number card to play, which becomes the "Starting number" and is placed in front of the player, removing that card from the player's hand. The "Starting Number" card occupies the "Grind Deck". This is the end of the first turn. At the end of every turn, the player's hand is replenished with cards to satisfy the conditions stated previously. After the first turn, the player may now play either number or arithmetic cards. If the player plays a number card, it replaces the card in the Grind Deck. If the player plays an addition card, the player must also play it with another number card in their hand, and the Grind Deck's value becomes the sum of the existing value of the Grind Deck and the player's played number card. If the player plays a subtraction card, the player must play it with another number card, and the Grind Deck's new value becomes the existing value of the Grind Deck minus the value of the number card played. If the result is a negative number, in Difficulty 1 the Grind Deck is set to the value zero, but in difficulty 3 and above, the value is the result. If the player plays a multiplication card, multiply the Grind Deck's value and the value of another number card played, and that becomes the Grind Deck's value. Finally, if the player plays a division card, divide the value of the Grind Deck by the value of another number card played, and if the player is in Difficulty 1, the quotient is the new value of the Grind Deck. If the player is in difficulty 2 or above, this value is the fraction if the number is rational, or the value is in decimal form if the number is irrational. 
+
+This process continues infinitely until the player quits the game. Keep track of the player's highest score ever achieved. There is a reset button the player can use to reset the game. 
+
+Use animations to show cards being moved from a deck to the player's hand when the player's hand is replenished. And use animations to show cards being played from the player's hand to the Grind Deck
+
+After the player has achieved at least a high score of 100 (in the same game), the number zero can be added to the deck. This will be a rare card that is only drawn occasionally. The zero card has a different shade of blue than the usual number cards. When the player restarts the game, this progress is reset to zero.
+
+After the player has achieved at least a high score of 500 (in the same game), in difficulty level 3 and above, negative numeral cards can be added to the deck (from -1 to -9) which are coloured purple).
+
+After the player has achieved at least a high score of 1000 (in the same game), in Difficulty level 4 and above, new "Function" cards can be added to the deck which are green and styled similarly to the arithmetic cards. The size of the player's hand now increases to nine, and two function cards are added to the player's hand. As the player continues playing, function cards are occasionally drawn from the deck. These function cards are:
+- Square Root (The Grind Deck's value is square rooted, to the nearest whole number)
+- Cube Root (The Grind Deck's value is cube rooted, to the nearest whole number)
+- The trigonometric functions sin(), cos() and tan(), sets the Grind Deck's value to the output of the trigonometric function using the Grind Deck's value as input
+- Reciprocal (The Grind Deck's value becomes its reciprocal)
+- Index (The Grind Deck's value is raised to the power of another chosen number card)
+- Remainder (The same action as the division card, this time using the remainder rather than the quotient).
+- Pythagoras' Theorem (The Grind Deck becomes the value of the square root of the sum of the Grind Deck's value squared and the squared value of another numeral card selected) 
+
+After the player has achieved a high score of at least 10000, in difficulty level 2 and above, pi and the natural number e can be added as numerals to the deck, which are yellow cards. In difficulty level 5, the variable x can be added as a black card to the deck that appears rarely after the first x card is drawn at score 10000. A new slot below the player's hand is opened with the caption "Algebra". The player is allowed to construct functions using the variable x which must be played. For example, after the x card is played, the player can play the Index function card and a numeral card to raise x to the power of that number. This is shown in the slot. If the player draws another x card, they can introduce another x term to the algebraic function with an arithmetic card or used together with a function card. The player can apply as many operations and functions as they wish. During any turn, the player can use the algebraic functions once-off on the Grind Deck. The value of the Grind Deck will be the value of x used to compute a result using the algebraic function created by the player, and that becomes the new value of the Grind Deck. The algebraic function slot then resets, requiring the player to play a new x card to use the function again.
+
+Use a nice modern aesthetic with bold borders.
+
+The web app should be built with the future capabilities in mind:
+- The ability to compete against a bot to see who gets the highest number with a fixed or unlimited deck. Function cards and arithmetic cards can be played on the other players' Grind Deck to change their values every alternate turn, including applying algebraic functions.
+- The ability to compete against other players over different devices
